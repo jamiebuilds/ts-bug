@@ -1,7 +1,9 @@
 # ts-bug
 
 Trying to compile the same module using `--esModuleInterop` with both
-`commonjs` and `module` ES modules
+`commonjs` and `esnext` modules
+
+---
 
 With the import:
 
@@ -34,8 +36,9 @@ With this error:
 
 > ***error TS1192: Module '"external"' has no default export.***
 
-You also cannot use `import fn = require('external')`:
+---
 
+You also cannot use `import fn = require('external')`:
 
 > ***error TS1202: Import assignment cannot be used when targeting ECMAScript
 > modules. Consider using 'import * as ns from "mod"', 'import {a} from "mod"',
@@ -44,6 +47,8 @@ You also cannot use `import fn = require('external')`:
 Or `const fn = require('external')`:
 
 > ***error TS2304: Cannot find name 'require'.***
+
+---
 
 But really the first should work because if you specify `esModuleInterop` and
 esnext, TypeScript should assume your compiler will take care of it. Otherwise
