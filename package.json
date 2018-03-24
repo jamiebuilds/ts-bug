@@ -1,0 +1,14 @@
+{
+  "name": "ts-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jamie Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "scripts": {
+    "check:commonjs": "tsc --project . --noEmit --esModuleInterop --module commonjs",
+    "check:esnext": "tsc --project . --noEmit --esModuleInterop --module esnext"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "include": ["index.ts"],
+  "files": ["external.d.ts"]
+}
